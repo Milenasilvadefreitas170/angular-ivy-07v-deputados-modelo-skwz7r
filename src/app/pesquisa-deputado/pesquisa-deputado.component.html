@@ -1,0 +1,17 @@
+<label for="nomeDeputado"> Nome do Deputado </label>
+<br />
+<input
+  type="text"
+  name="nomeDeputado"
+  #nomeDeputado
+  (keyup)="pesquisarDeputado(nomeDeputado.value)"
+/>
+
+<h2>Deputados Adicionados: </h2>
+
+<div *ngFor="let deputado of deputados$ | async">
+  <img class="foto" [src]="deputado.urlFoto" />
+  <p>Nome: {{ deputado.nome }}</p>
+  <p>Partido: {{ deputado.siglaPartido }}</p>
+  <p>Estado: {{ deputado.siglaUf }}</p>
+</div>

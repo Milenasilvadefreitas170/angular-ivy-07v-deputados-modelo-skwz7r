@@ -1,0 +1,6 @@
+<div *ngFor="let dep of deputados">
+  <img class="foto" [src]="dep.urlFoto" />
+  <p>Nome: {{ dep.nome }}</p>
+  <p>Partido: {{ dep.siglaPartido }}</p>
+  <p>Estado: {{ dep.siglaUf }}</p>
+</div>
